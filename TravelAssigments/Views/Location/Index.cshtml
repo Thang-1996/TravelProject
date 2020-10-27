@@ -1,50 +1,78 @@
 ﻿@model IEnumerable<TravelAssigments.Models.Location>
+    
+   
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Location List</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div class="col-lg-12 col-md-12" style="margin-bottom:50px;">
+    <div class="row">
+        @using (Html.BeginForm("Index", "Location", FormMethod.Get, new { @class = "d-none d-sm-inline-block form-inline mr-auto ml-md-6 my-2 my-md-0 mw-100 navbar-search col-lg-4 col-md-4" }))
+        {
+
+
+            <div class="input-group">
+                @Html.TextBox("Search", ViewBag.CurrentFilter as string, new { @class = "form-control bg-light border-1 small" })
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-search fa-sm"></i>
+                    </button>
+                </div>
+
+            </div>
+
+
+        }
+        <div class="col-lg-2 col-md-2"></div>
+        <div class="col-lg-6 col-md-6">
+            <a href="/Location/Create" style="float:right" class="btn btn-primary">Create</a>
+        </div>
+    </div>
+</div>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.LocationName)
+            @Html.ActionLink("Location Name", "Index", new
+            {
+                sortOrder = ViewBag.NameSortParm,
+
+           currentFilter = ViewBag.CurrentFilter
+       });
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LocationAddress)
+            LocationAddress
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LocationDescription)
+            LocationDescription
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Status)
+            Status
         </th>
         <th></th>
     </tr>
 
-@foreach (TravelAssigments.Models.Location location in ViewBag.listLocation) {
+@foreach (var item in Model) {
     <tr>
         <td>
-            @location.LocationName
+            @Html.DisplayFor(modelItem => item.LocationName)
         </td>
         <td>
-            @location.LocationAddress
+            @Html.DisplayFor(modelItem => item.LocationAddress)
         </td>
         <td>
-            @location.LocationDescription
+            @Html.DisplayFor(modelItem => item.LocationDescription)
         </td>
         <td>
-            @location.Status
+            @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=location.id }) |
-            @Html.ActionLink("Details", "Details", new { id=location.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=location.id })
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id= item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id= item.id })
         </td>
     </tr>
 }

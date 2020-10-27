@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
@@ -12,10 +13,39 @@ namespace TravelAssigments.Controllers
     {
         ServicesClient servicesClient = new ServicesClient();
         // GET: Location
-        public ActionResult Index()
+        public ViewResult Index(string sortOrder, string search, string currentFilter, int? page)
         {
-            ViewBag.listLocation = servicesClient.getAllLocations();
-            return View();
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            /*            ViewBag.listLocation = servicesClient.getAllLocations();
+            */
+            if (search != null)
+            {
+                page = 1; // nếu search có giá trị trả về page = 1
+            }
+            else
+            {
+                search = currentFilter; //  nếu có thì render phần dữ liệu search ra
+            }
+            ViewBag.CurrentFilter = search;
+            var locations = from s in servicesClient.getAllLocations() select s;
+            if (!String.IsNullOrEmpty(search)) // check nếu search string có thì in ra hoặc không thì không in ra
+            {
+                locations = locations.Where(s => s.LocationName.Contains(search) || s.LocationAddress.Contains(search)); // contains là để check xem lastname hoặc firstName có chứa search string ở trên 
+            }
+            switch (sortOrder)
+            {
+                case "name desc":
+                    locations = locations.OrderByDescending(s => s.LocationName); // các case tương đương với các cột muốn sort
+                    break;
+              
+                default:
+                    locations = locations.OrderBy(s => s.LocationName);
+                    break;
+            }
+           
+            return View(locations.ToList());
+            /*return View();*/
         }
 
         // GET: Location/Details/5
