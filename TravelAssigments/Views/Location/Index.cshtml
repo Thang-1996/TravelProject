@@ -1,0 +1,52 @@
+﻿@model IEnumerable<TravelAssigments.Models.Location>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (TravelAssigments.Models.Location location in ViewBag.listLocation) {
+    <tr>
+        <td>
+            @location.LocationName
+        </td>
+        <td>
+            @location.LocationAddress
+        </td>
+        <td>
+            @location.LocationDescription
+        </td>
+        <td>
+            @location.Status
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=location.id }) |
+            @Html.ActionLink("Details", "Details", new { id=location.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=location.id })
+        </td>
+    </tr>
+}
+
+</table>

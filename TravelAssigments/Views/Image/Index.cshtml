@@ -1,0 +1,34 @@
+﻿@model IEnumerable<TravelAssigments.Models.Image>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.imageurl)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (TravelAssigments.Models.Image image in ViewBag.listImage) {
+    <tr>
+        <td>
+            @image.imageurl
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id= image.id }) |
+            @Html.ActionLink("Details", "Details", new { id= image.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id= image.id })
+        </td>
+    </tr>
+}
+
+</table>

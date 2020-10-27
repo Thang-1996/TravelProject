@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.5, 11.5" name="Travel">
+  <DataContextMoniker Name="/TravelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5a3a6990-81ff-42bc-a9f1-02090726e5ba" absoluteBounds="6.75, 7.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TravelDataContext/__MigrationHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be40d9fb-0693-4fa0-bccb-80a99418dae5" absoluteBounds="6.765, 7.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5f35989-5b8a-4ce3-97b0-492c503ce21b" absoluteBounds="0.75, 9.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TravelDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1fed0e55-de68-42f9-8340-1719aff6cb00" absoluteBounds="0.765, 9.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="12fd7e07-0f58-4f7f-995e-34d33f3d84ff" absoluteBounds="0.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/TravelDataContext/AspNetRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="816582dd-ca09-4fd2-8d99-ead09fde3faf" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fb32b5cd-b2ee-4834-b684-6e729ffb41b6" absoluteBounds="3.5, 6.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TravelDataContext/AspNetUserClaim" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b435e31-b3ca-40a6-8c49-34af6297395e" absoluteBounds="3.515, 7.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="33e97d43-be30-4260-b239-2d14712a0945" absoluteBounds="3.5, 4.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/TravelDataContext/AspNetUserLogin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd6cbca0-6f1d-48e3-b772-c7350034f5e4" absoluteBounds="3.515, 4.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0ce390be-8ad8-4115-810e-5a5ca67a69d0" absoluteBounds="3.5, 1.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/TravelDataContext/AspNetUserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="35769eb9-03ed-4327-9486-029793e696b3" absoluteBounds="3.515, 2.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5f133d11-734e-4437-8ec5-c6eb65647a35" absoluteBounds="0.75, 2.75, 2, 3.1170068359375">
+      <DataClassMoniker Name="/TravelDataContext/AspNetUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f45c8b90-ff12-477d-8e35-23540fc82063" absoluteBounds="0.765, 3.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6bcfc66a-72c5-441a-af7c-fd487b780439" absoluteBounds="12.25, 3.625, 2, 1.9631982421875009">
+      <DataClassMoniker Name="/TravelDataContext/Comment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bdd86425-72f1-460f-9e7e-d6983472d381" absoluteBounds="12.265, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b260b929-d0ef-447a-b889-e4c97c3ed857" absoluteBounds="9.5, 1.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/TravelDataContext/Image" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f8ecbef-1cd6-47f0-b1f1-614cec2af31e" absoluteBounds="9.515, 1.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70c893e3-f04c-401a-a3f9-4e3f8d5acaa8" absoluteBounds="6.75, 2.625, 2, 1.770896809895834">
+      <DataClassMoniker Name="/TravelDataContext/Location" />
+      <nestedChildShapes>
+        <elementListCompartment Id="39d251ba-78af-4e59-9da2-edd2535020d9" absoluteBounds="6.765, 3.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a9e966b-f5a1-4f8b-b3d3-8e9e07144ca1" absoluteBounds="9.5, 3.625, 2, 1.9631982421875009">
+      <DataClassMoniker Name="/TravelDataContext/Post" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23a56bbf-f896-4304-8cd7-8a310a1acd8d" absoluteBounds="9.515, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 1.94399251302083); (1.75 : 2.34699625651042); (3.5 : 2.34699625651042)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TravelDataContext/AspNetRole/AspNetRole_AspNetUserRole" />
+      <nodes>
+        <classShapeMoniker Id="12fd7e07-0f58-4f7f-995e-34d33f3d84ff" />
+        <classShapeMoniker Id="0ce390be-8ad8-4115-810e-5a5ca67a69d0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 5.8670068359375); (1.75 : 7.41429768880208); (3.5 : 7.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TravelDataContext/AspNetUser/AspNetUser_AspNetUserClaim" />
+      <nodes>
+        <classShapeMoniker Id="5f133d11-734e-4437-8ec5-c6eb65647a35" />
+        <classShapeMoniker Id="fb32b5cd-b2ee-4834-b684-6e729ffb41b6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.06814697265625); (3.5 : 5.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TravelDataContext/AspNetUser/AspNetUser_AspNetUserLogin" />
+      <nodes>
+        <classShapeMoniker Id="5f133d11-734e-4437-8ec5-c6eb65647a35" />
+        <classShapeMoniker Id="33e97d43-be30-4260-b239-2d14712a0945" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.75); (3.125 : 2.375); (3.125 : 3.31899251302083); (3.5 : 2.94399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TravelDataContext/AspNetUser/AspNetUser_AspNetUserRole" />
+      <nodes>
+        <classShapeMoniker Id="5f133d11-734e-4437-8ec5-c6eb65647a35" />
+        <classShapeMoniker Id="0ce390be-8ad8-4115-810e-5a5ca67a69d0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.75 : 2.625); (7.75 : 2.0624995); (9.5 : 2.0624995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TravelDataContext/Location/Location_Image" />
+      <nodes>
+        <classShapeMoniker Id="70c893e3-f04c-401a-a3f9-4e3f8d5acaa8" />
+        <classShapeMoniker Id="b260b929-d0ef-447a-b889-e4c97c3ed857" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 4.60659912109375); (12.25 : 4.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TravelDataContext/Post/Post_Comment" />
+      <nodes>
+        <classShapeMoniker Id="9a9e966b-f5a1-4f8b-b3d3-8e9e07144ca1" />
+        <classShapeMoniker Id="6bcfc66a-72c5-441a-af7c-fd487b780439" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 4.01044840494792); (9.5 : 4.01044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TravelDataContext/Location/Location_Post" />
+      <nodes>
+        <classShapeMoniker Id="70c893e3-f04c-401a-a3f9-4e3f8d5acaa8" />
+        <classShapeMoniker Id="9a9e966b-f5a1-4f8b-b3d3-8e9e07144ca1" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

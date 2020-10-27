@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TravelServiceApplication" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TravelServiceApplication" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Location" nillable="true" type="tns:Location" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLocation" nillable="true" type="tns:ArrayOfLocation" />
+  <xs:complexType name="Location">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Images" nillable="true" type="tns:ArrayOfImage" />
+      <xs:element minOccurs="0" name="LocationAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Posts" nillable="true" type="tns:ArrayOfPost" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Location" nillable="true" type="tns:Location" />
+  <xs:complexType name="ArrayOfImage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Image" nillable="true" type="tns:Image" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImage" nillable="true" type="tns:ArrayOfImage" />
+  <xs:complexType name="Image">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Location" nillable="true" type="tns:Location" />
+      <xs:element minOccurs="0" name="LocationID" type="xs:int" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="imageurl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Image" nillable="true" type="tns:Image" />
+  <xs:complexType name="ArrayOfPost">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Post" nillable="true" type="tns:Post" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPost" nillable="true" type="tns:ArrayOfPost" />
+  <xs:complexType name="Post">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="tns:ArrayOfComment" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="tns:Location" />
+      <xs:element minOccurs="0" name="LocationID" type="xs:int" />
+      <xs:element minOccurs="0" name="PostDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Post" nillable="true" type="tns:Post" />
+  <xs:complexType name="ArrayOfComment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Comment" nillable="true" type="tns:Comment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfComment" nillable="true" type="tns:ArrayOfComment" />
+  <xs:complexType name="Comment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CommentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CommentInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Post" nillable="true" type="tns:Post" />
+      <xs:element minOccurs="0" name="PostID" type="xs:int" />
+      <xs:element minOccurs="0" name="Rating" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Comment" nillable="true" type="tns:Comment" />
+</xs:schema>

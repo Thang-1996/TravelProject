@@ -1,0 +1,52 @@
+﻿@model IEnumerable<TravelAssigments.Models.Comment>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CommentInfo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CommentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (TravelAssigments.Models.Comment comment in ViewBag.listComment) {
+    <tr>
+        <td>
+            @comment.CommentInfo
+        </td>
+        <td>
+            @comment.CommentDate
+        </td>
+        <td>
+            @comment.Status
+        </td>
+        <td>
+            @comment.Rating
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id= comment.id }) |
+            @Html.ActionLink("Details", "Details", new { id= comment.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id= comment.id })
+        </td>
+    </tr>
+}
+
+</table>
