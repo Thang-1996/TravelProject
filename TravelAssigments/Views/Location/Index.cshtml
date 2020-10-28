@@ -7,7 +7,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Location List</h2>
+<h6>Nhập vào để tìm kiếm :</h6>
 
 <div class="col-lg-12 col-md-12" style="margin-bottom:50px;">
     <div class="row">
@@ -36,21 +36,21 @@
 <table class="table">
     <tr>
         <th>
-            @Html.ActionLink("Location Name", "Index", new
+            @Html.ActionLink("Tên Địa Điểm", "Index", new
             {
                 sortOrder = ViewBag.NameSortParm,
 
            currentFilter = ViewBag.CurrentFilter
-       });
+       })
         </th>
         <th>
-            LocationAddress
+            Địa Chỉ
         </th>
         <th>
-            LocationDescription
+            Chi Tiết
         </th>
         <th>
-            Status
+           Trạng Thái
         </th>
         <th></th>
     </tr>
